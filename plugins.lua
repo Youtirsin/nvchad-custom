@@ -47,6 +47,11 @@ local plugins = {
     end,
   },
 
+  {
+    "Shatur/neovim-session-manager",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
