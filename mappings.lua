@@ -4,7 +4,7 @@ local M = {}
 M.general = {
   v = {
     [">"] = { ">gv", "indent"},
-    ["<Leader>y"] = {"\"+y"},
+    ["<Leader>y"] = {"\"+y", "copy to clipboard"},
   },
 }
 
