@@ -4,6 +4,7 @@ local M = {}
 M.general = {
   v = {
     [">"] = { ">gv", "indent"},
+    ["<Leader>y"] = {"\"+y"},
   },
 }
 
