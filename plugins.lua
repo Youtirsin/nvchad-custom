@@ -58,6 +58,15 @@ local plugins = {
     end,
   },
 
+  {
+    "stevearc/aerial.nvim",
+    lazy = false,
+    config = function()
+      require("aerial").setup()
+      vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
