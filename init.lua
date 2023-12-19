@@ -6,3 +6,4 @@
 --   command = "tabdo wincmd =",
 -- })
 vim.opt.clipboard = ""
+vim.wo.relativenumber = true
