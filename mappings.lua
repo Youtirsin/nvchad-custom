@@ -16,11 +16,12 @@ end
 M.general = {
   n = {
     ["<Leader>a"] = {"<cmd>AerialToggle!<CR>", "Open Aerial outline"},
+    ["qq"] = {":q<CR>", "quit"}
   },
   v = {
     [">"] = { ">gv", "indent"},
     ["<Leader>y"] = {"\"+y", "Copy to clipboard"},
-    ["f"] = {range_formatting, "LSP range formatting"}
+    ["<Leader>f"] = {range_formatting, "LSP range formatting"},
   },
 }
 
