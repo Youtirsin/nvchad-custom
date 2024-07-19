@@ -1,5 +1,6 @@
----@type MappingsTable
-local M = {}
+require "nvchad.mappings"
+
+-- add yours here
 
 local range_formatting = function()
   local start_row, _ = unpack(vim.api.nvim_buf_get_mark(0, "<"))
@@ -13,18 +14,13 @@ local range_formatting = function()
   })
 end
 
-M.general = {
-  n = {
-    ["<Leader>a"] = {"<cmd>AerialToggle!<CR>", "Open Aerial outline"},
-    ["qq"] = {":q<CR>", "quit"}
-  },
-  v = {
-    [">"] = { ">gv", "indent"},
-    ["<Leader>y"] = {"\"+y", "Copy to clipboard"},
-    ["<Leader>f"] = {range_formatting, "LSP range formatting"},
-  },
-}
+local map = vim.keymap.set
 
--- more keybinds!
+map("n", "<Leader>a", "<cmd>AerialToggle!<CR>", { desc = "Open Aerial outline" })
+map("n", "qq", ":q<CR>", { desc = "quit" })
 
-return M
+map("v", ">", ">gv", { desc = "indent" })
+map("v", "<Leader>y", "\"+y", { desc = "Copy to clipboard" })
+map("v", "<Leader>f", range_formatting, { desc = "LSP range formatting" })
+
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
